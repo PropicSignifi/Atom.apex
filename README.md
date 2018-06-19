@@ -66,6 +66,7 @@ new Atom()
 We have different kinds of steps in Atom.apex.
 
 - Simple Step
+
 A simple step is one that contains a compute. The only job for a simple step is to execute that compute.
 
 ```java
@@ -76,6 +77,7 @@ new Atom()
 ```
 
 - Composite Step
+
 A composite step is one that can contain multiple steps. It executes the children steps one by one.
 
 ```java
@@ -88,6 +90,7 @@ new Atom()
 ```
 
 - ForEach Step
+
 A ForEachStep is one that executes the 'for-each' loop with the given step. It looks up for the collection data with the given name from the Atom state, and creates a new looping item before invoking the looping step.
 
 ```java
@@ -98,6 +101,7 @@ new Atom(initialData)
 ```
 
 - Range Step
+
 A RangeStep is one that executes the given step with a range of numbers.
 
 ```java
@@ -107,6 +111,7 @@ new Atom()
 ```
 
 - Repeat Step
+
 A RepeatStep is one that repeats the given step until N times.
 
 ```java
