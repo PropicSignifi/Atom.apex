@@ -1,0 +1,121 @@
+---
+title: "Home"
+description: "Atom.apex is a library that tries to save you from the doom of Salesforce governor limits."
+---
+
+{namespace pageIndex}
+
+/**
+ */
+{template .render}
+	{@param site: ?}
+
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+			{call .why /}
+			{call .features /}
+			{call .how /}
+			{call .highlights /}
+			{call Footer.render data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ */
+{template .header}
+	{@param site: ?}
+
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">{$site.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
+			<div class="btn-group">
+				<a href="/atom-apex/tutorials/getting_started/step_1.html" class="btn btn-accent btn-sm">Get Started</a>
+				<a href="https://github.com/Click-to-Cloud/Atom.apex/" class="btn btn-success btn-sm">GitHub</a>
+				<a href="/" onclick="location.assign('/')" class="btn btn-default btn-sm">Not Interested</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ */
+{template .why}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Why Atom.apex?</h3>
+					<p class="about-description">Your apex code has always been working fine until someday it fails because of a huge amount of data. Usually this is because your code does not scale well. Atom.apex gives you this scalability and you only need to focus on your business logic.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .features}
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<section class="feature col-md-4 col-md-offset-2">
+					<h3 class="feature-title">Governor Limit Proof</h3>
+					<p class="feature-description">Atom.apex guards your code executing without being interrupted by governor limits.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Functional Support</h3>
+					<p class="feature-description">Atom.apex integrates functions to build your business logic.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Customizable</h3>
+					<p class="feature-description">Atom.apex can be extended to meet your needs.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ */
+{template .how}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Governor Limit Free</h3>
+					<p class="about-description">Atom.apex tries to set a governor limit free environment for your code to run.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .highlights}
+	<div class="highlights">
+		<div class="container">
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">Multi-step Execution</h4>
+					<p class="highlight-description">Atom.apex splits your business logic into steps, which can be executed in multiple queueable jobs.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/atom-apex/images/highlight_1.png" alt="Multi-step Execution" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-push-9">
+					<h4 class="highlight-title">Functional Support</h4>
+					<p class="highlight-description">Atom.apex can be integrated easily with functions.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-2 col-md-pull-6">
+					<img class="highlight-image" src="/atom-apex/images/highlight_2.png" alt="Functional Support" height="200">
+				</div>
+			</section>
+		</div>
+	</div>
+{/template}

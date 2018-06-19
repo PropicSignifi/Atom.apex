@@ -1004,6 +1004,16 @@ public class Atom implements Queueable, Database.AllowsCallouts {
 
     // Exposed Funcs
     public class Funcs {
+        /**
+         * Compute the given Func with arguments from the state and set the value back
+         *
+         * Example:
+         * Func f = Atom.F.compute.apply('count', R.inc, 'count');
+         * // Get the 'count', increment it and set the value back to 'count'
+         *
+         * Func f = Atom.F.compute.apply(R.inc, 'count');
+         * // Get the 'count', increment it and do not set it back
+         * */
         public Func compute = new ComputeFunc();
     }
 
